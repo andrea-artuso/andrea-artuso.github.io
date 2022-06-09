@@ -1,5 +1,6 @@
 import './App.css';
 import ProfilePictue from './assets/ProfilePicture.png';
+import logo from './assets/logotype-WHITE.png';
 import { useState } from 'react';
 import { LinkedinBoxFill, GithubFill, Envelope } from 'akar-icons';
 
@@ -8,7 +9,7 @@ function App() {
 
   return (
     <>
-      <header>
+      <header id='home'>
         <span className={`hidden-menu ${isMenuVisible ? '' : 'hidden'}`} id='email-action'>
           <h2>Choose an action:</h2>
           <button onClick={() => navigator.clipboard.writeText('andrea.artuso.business@gmail.com')}>Copy email address</button>
@@ -50,6 +51,27 @@ Lorem ipsum dolor sit amet.</p>
         <a href='' download={true}>Download my CV</a>
         </div>
       </header>
+
+      <main>
+        <h1>Projects</h1>
+
+        <section id='website-projects'>
+          <h2>Websites</h2>
+        </section>
+
+        <section id='other-projects'>
+          <h2>Other projects</h2>
+        </section>
+
+      </main>
+
+      <footer>
+        <div><img src={logo} alt='logo' /></div>
+
+        <p>© Andrea Artuso - 2022</p>
+
+        <div><a href='#home'>Scroll to top</a></div>
+      </footer>
     </>
   );
 }

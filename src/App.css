@@ -152,3 +152,42 @@ header > div#resume > a {
   color: #fff;
   display: block;
 }
+
+
+main {
+  color: #fff;
+  padding: 94px 80px;
+}
+main h2 {
+  font-size: 24px;
+  font-weight: 500;
+}
+
+main section {
+  padding: 20px;
+}
+
+
+footer {
+  background-color: #020202;
+  color: #fff;
+  padding: 20px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+footer > * {
+  width: 30%;
+  text-align: center;
+}
+
+footer img {
+  width: 40%;
+}
+
+footer a {
+  font-size: 20px;
+  font-weight: 700;
+  color: #fff;
+}
