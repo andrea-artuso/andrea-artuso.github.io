@@ -1,8 +1,11 @@
 import './App.css';
 import ProfilePictue from './assets/ProfilePicture.png';
 import logo from './assets/logotype-WHITE.png';
-import { useState } from 'react';
 import { LinkedinBoxFill, GithubFill, Envelope } from 'akar-icons';
+
+import { useState } from 'react';
+
+import WebProject from './components/WebProject/WebProject';
 
 function App() {
   const [isMenuVisible, setIsMenuVisible] = useState(false);
@@ -57,6 +60,11 @@ Lorem ipsum dolor sit amet.</p>
 
         <section id='website-projects'>
           <h2>Websites</h2>
+
+          <div className='grid'>
+            <WebProject imgUrl={logo} title='test1' year={2022} description='hello world' links={['ciao', 'ci']} />
+          </div>
+
         </section>
 
         <section id='other-projects'>
