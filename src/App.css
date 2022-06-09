@@ -1,0 +1,154 @@
+header {
+  background-color: #020202;
+  width: auto;
+  margin: 20px;
+  border-radius: 29px;
+  padding: 70px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hidden-menu {
+  background-color: #272727;
+  color: #fff;
+  border-radius: 20px;
+  padding: 40px;
+
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.hidden-menu::before {
+  content: '';
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 10px solid #272727;
+}
+
+.hidden-menu > * {
+  display: block;
+}
+.hidden-menu > h2 {
+  margin-bottom: 25px;
+}
+.hidden-menu > button, .hidden-menu > a {
+  border: none;
+  background: none;
+  font-size: 18px;
+  cursor: pointer;
+  color: #fff;
+  margin: 10px 0;
+  text-decoration: none;
+}
+
+.hidden-menu > button:hover, .hidden-menu >  a:hover {
+  font-weight: 600;
+  color: #FF3D00;
+}
+
+.hidden-menu > .close-button {
+  margin: auto;
+  text-decoration: underline;
+  font-size: 14px;
+  margin-top: 25px;
+}
+.hidden-menu > .close-button:hover {
+  color: #008cff;
+  font-weight: 400;
+}
+
+.hidden {
+  display: none;
+}
+
+
+
+header > div#profile {
+  width: 30%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+header > div#profile > img {
+  width: 50%;
+  height: 50%;
+  border-radius: 50%;
+  border: 5px solid #FF3D00;
+}
+header > div#profile > .social-container {
+  margin-top: 20px;
+}
+header > div#profile > .social-container > .social-icon {
+  padding: 8px;
+  width: 35px;
+  height: 35px;
+  background-color: #FF3D00;
+  margin: 0 12px;
+  border: none;
+  border-radius: 9px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+header > div#profile > .social-container > .social-icon > * {
+  color: #fff;
+}
+header > div#profile > .social-container > .social-icon:hover {
+  color: #fff;
+  transform: scale(115%);
+}
+
+
+header > div#info {
+  color: #fff;
+  width: 30%;
+}
+header > div#info > h1 {
+  font-size: 40px;
+  font-weight: 800;
+}
+header > div#info > .bio {
+  padding: 10px;
+}
+header > div#info > .bio > p {
+  font-size: 16px;
+  margin: 7px 0;
+}
+header > div#info > .bio > p > span {
+  font-style: italic;
+  margin-left: 5px;
+}
+header > div#info > p {
+  max-width: 80%;
+  font-size: 14px;
+}
+
+
+header > div#resume {
+  width: 30%;
+  margin-left: 50px;
+  color: #fff;
+}
+header > div#resume > .title {
+  margin-bottom: 20px;
+}
+header > div#resume > p {
+  max-width: 80%;
+  font-size: 14px;
+}
+header > div#resume > a {
+  margin-top: 20px;
+  font-weight: 700;
+  color: #fff;
+  display: block;
+}
