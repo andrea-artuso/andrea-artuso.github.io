@@ -1,6 +1,9 @@
 import './App.css';
 import ProfilePictue from './assets/ProfilePicture.png';
 import logo from './assets/logotype-WHITE.png';
+
+import eroforestiero from './assets/projects/ero-forestiero.webp';
+
 import { LinkedinBoxFill, GithubFill, Envelope } from 'akar-icons';
 
 import { useState } from 'react';
@@ -62,7 +65,7 @@ Lorem ipsum dolor sit amet.</p>
           <h2>Websites</h2>
 
           <div className='grid'>
-            <WebProject imgUrl={logo} title='test1' year={2022} description='hello world' links={['ciao', 'ci']} />
+            <WebProject imgUrl={eroforestiero} title='Ero Forestiero' year={2021} description='Ero Forestiero è un’associazione senza scopo di lucro, apartitica e apolitica che svolge attività formative a favore dell’integrazione sociale delle persone di origine non italiana presenti sul territorio di Vigevano, ponendo particolare attenzione alla tutela della loro identità culturale e religiosa.' links={['https://www.eroforestiero.org/', 'https://github.com/Coding-Bunker/Ero-Forestiero']} />
           </div>
 
         </section>

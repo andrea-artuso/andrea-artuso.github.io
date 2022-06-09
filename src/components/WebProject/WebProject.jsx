@@ -1,4 +1,7 @@
+import PropTypes from 'prop-types'
+
 import './WebProject.css'
+
 import { GithubFill } from 'akar-icons';
 
 const WebProject = ({ imgUrl, title, year, description, links }) => {
@@ -19,8 +22,8 @@ const WebProject = ({ imgUrl, title, year, description, links }) => {
             <div className='inline-links'>
                 {links.length === 2 ? 
                     <>
-                        <a href={links[0]} className='first-button'>Visit website</a>
-                        <a href={links[1]} className='secondary-button'> <GithubFill strokeWidth={2} size={20} /> </a>
+                        <a href={links[0]} target='_blank' rel='noopener noreferrer' className='first-button'>Visit website</a>
+                        <a href={links[1]} target='_blank' rel='noopener noreferrer' className='secondary-button'> <GithubFill strokeWidth={2} size={20} /> </a>
                     </>
                     : <a href={links[0]} className='first-button'>Visit website</a>
                 }
@@ -29,5 +32,13 @@ const WebProject = ({ imgUrl, title, year, description, links }) => {
     </div>
   )
 }
+
+WebProject.propTypes = {
+    imgUrl: PropTypes.string,
+    title: PropTypes.string,
+    year: PropTypes.number,
+    description: PropTypes.string,
+    links: PropTypes.string
+  }
 
 export default WebProject
