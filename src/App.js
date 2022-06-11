@@ -9,6 +9,7 @@ import { LinkedinBoxFill, GithubFill, Envelope } from 'akar-icons';
 import { useState } from 'react';
 
 import WebProject from './components/WebProject/WebProject';
+import OtherProject from './components/OtherProject/OtherProject';
 
 function App() {
   const [isMenuVisible, setIsMenuVisible] = useState(false);
@@ -72,6 +73,10 @@ Lorem ipsum dolor sit amet.</p>
 
         <section id='other-projects'>
           <h2>Other projects</h2>
+
+          <div className='grid'>
+            <OtherProject imgUrl={eroforestiero} title='Project 1' year={2020} role='Frontend developer' url='https://www.google.it' />
+          </div>
         </section>
 
       </main>
