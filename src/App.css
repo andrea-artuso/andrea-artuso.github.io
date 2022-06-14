@@ -205,6 +205,9 @@ footer a {
   font-weight: 700;
   color: #fff;
 }
+footer a:hover {
+  color: #FF3D00;
+}
 
 
 
