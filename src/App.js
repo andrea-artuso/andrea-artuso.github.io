@@ -6,13 +6,18 @@ import eroforestiero from './assets/projects/ero-forestiero.webp';
 
 import { LinkedinBoxFill, GithubFill, Envelope } from 'akar-icons';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 import WebProject from './components/WebProject/WebProject';
 import OtherProject from './components/OtherProject/OtherProject';
 
 function App() {
   const [isMenuVisible, setIsMenuVisible] = useState(false);
+
+  useEffect(() => {
+    if (!document.getElementById('web-project').hasChildNodes()) { document.getElementById('web-project').innerHTML = '<p style="padding: 10px">No projects yet</p>' }
+    if (!document.getElementById('other-project').hasChildNodes()) { document.getElementById('other-project').innerHTML = '<p style="padding: 10px">No projects yet</p>' }
+  }, []);
 
   return (
     <>
@@ -44,18 +49,31 @@ function App() {
           </div>
 
           <p className='description'>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+          I am Andrea and I'm a junior frontend web developer based in Italy.
+          I started my journey in IT when I was in the middle school and I started to learn web development with HTML and CSS.
+          After a couple of year, I started to learn JavaScript, ReactJS and C/C++ languages.
+          After finishing High School I want to enroll Computer Science class at the University.
+          I describe myself as a creative thinker and a problem solver, I challenge myself with side projects and I love to work in team.
           </p>
 
         </div>
 
         <div id='resume'>
           <p className='title'><strong>Resume</strong></p>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-Lorem ipsum dolor sit amet.</p>
+          <p>
+            <strong>Schools:</strong>
+            <ul className='resume-list'>
+              <li>ITT G. Fauser (Novara) | 2019-2024</li>
+              <li>Middle School (Varallo) | 2016-2019</li>
+            </ul>
+            <br />
+            <strong>Work experience:</strong>
+            <ul className='resume-list'>
+              <li>Stagist at Hal Service | summer 2022</li>
+            </ul>
+          </p>
 
-        <a href='' download={true}>Download my CV</a>
+        {/*<a href='' download={true}>Download my CV</a>*/}
         </div>
       </header>
 
@@ -65,7 +83,7 @@ Lorem ipsum dolor sit amet.</p>
         <section id='website-projects'>
           <h2>Websites</h2>
 
-          <div className='grid'>
+          <div className='grid' id='web-project'>
             <WebProject imgUrl={eroforestiero} title='Ero Forestiero' year={2021} description='Ero Forestiero è un’associazione senza scopo di lucro, apartitica e apolitica che svolge attività formative a favore dell’integrazione sociale delle persone di origine non italiana presenti sul territorio di Vigevano, ponendo particolare attenzione alla tutela della loro identità culturale e religiosa.' links={['https://www.eroforestiero.org/', 'https://github.com/Coding-Bunker/Ero-Forestiero']} />
           </div>
 
@@ -74,8 +92,8 @@ Lorem ipsum dolor sit amet.</p>
         <section id='other-projects'>
           <h2>Other projects</h2>
 
-          <div className='grid'>
-            <OtherProject imgUrl={eroforestiero} title='Project 1' year={2020} role='Frontend developer' url='https://www.google.it' />
+          <div className='grid' id='other-project'>
+            {/*<OtherProject imgUrl={eroforestiero} title='Project 1' year={2020} role='Frontend developer' url='https://www.google.it' />*/}
           </div>
         </section>
 
@@ -86,7 +104,7 @@ Lorem ipsum dolor sit amet.</p>
 
         <p>© Andrea Artuso - 2022</p>
 
-        <div><a href='#home'>Scroll to top</a></div>
+        <div><a href='/#'>Scroll to top</a></div>
       </footer>
     </>
   );
