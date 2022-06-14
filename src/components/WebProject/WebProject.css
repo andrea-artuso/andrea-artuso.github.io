@@ -76,3 +76,25 @@
     font-weight: 700;
     transition: .2s ease-in;
 }
+
+
+@media screen and (max-width: 350px) {
+    .web-project  .inline-info > h3 {
+        font-size: 16px;
+        font-weight: 400;
+    }
+    .web-project  .inline-info > h2 {
+        font-weight: 700;
+    }
+
+    .web-project p {
+        font-size: 14px;
+    }
+
+    .inline-links {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 15px;
+    }
+}
