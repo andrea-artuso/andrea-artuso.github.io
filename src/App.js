@@ -25,7 +25,7 @@ function App() {
         <span className={`hidden-menu ${isMenuVisible ? '' : 'hidden'}`} id='email-action'>
           <h2>Choose an action:</h2>
           <button onClick={() => navigator.clipboard.writeText('andrea.artuso.business@gmail.com')}>Copy email address</button>
-          <a href='mailto:andrea.artuso.business@gmail.com'>Send me and email</a>
+          <a href='mailto:andrea.artuso.business@gmail.com'>Send me an email</a>
 
           <button onClick={() => setIsMenuVisible(!isMenuVisible)} className='close-button'>Close menu</button>
         </span>
