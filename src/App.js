@@ -84,7 +84,7 @@ function App() {
           <h2>Websites</h2>
 
           <div className='grid' id='web-project'>
-            <WebProject imgUrl={eroforestiero} title='Ero Forestiero' year={2021} description='Ero Forestiero è un’associazione senza scopo di lucro, apartitica e apolitica che svolge attività formative a favore dell’integrazione sociale delle persone di origine non italiana presenti sul territorio di Vigevano, ponendo particolare attenzione alla tutela della loro identità culturale e religiosa.' links={['https://www.eroforestiero.org/', 'https://github.com/Coding-Bunker/Ero-Forestiero']} />
+            <WebProject imgUrl={eroforestiero} title='Ero Forestiero' year={2021} description='Ero Forestiero is a non-profit, non-partisan and apolitical association that carries out training activities in favor of the social integration of people of non-Italian origin present in the Vigevano area, paying particular attention to the protection of their cultural and religious identity.' links={['https://www.eroforestiero.org/', 'https://github.com/Coding-Bunker/Ero-Forestiero']} />
           </div>
 
         </section>
