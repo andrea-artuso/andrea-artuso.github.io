@@ -69,7 +69,7 @@ function App() {
             <br />
             <strong>Work experience:</strong>
             <ul className='resume-list'>
-              <li>Stagist at Hal Service | summer 2022</li>
+              <li>Stagist at Hal Service | June - July 2022</li>
             </ul>
           </p>
 
