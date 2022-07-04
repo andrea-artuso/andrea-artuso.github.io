@@ -4,6 +4,8 @@ import logo from './assets/logotype-WHITE.png';
 
 import eroforestiero from './assets/projects/ero-forestiero.webp';
 
+import CV from './assets/AndreaArtuso_CV_07-2022.pdf';
+
 import { LinkedinBoxFill, GithubFill, Envelope } from 'akar-icons';
 
 import { useState, useEffect } from 'react';
@@ -63,7 +65,7 @@ function App() {
           <p>
             <strong>Schools:</strong>
             <ul className='resume-list'>
-              <li>ITT G. Fauser (Novara) | 2019-2024</li>
+              <li>ITT "G. Fauser" High School (Novara) | 2019-2024</li>
               <li>Middle School (Varallo) | 2016-2019</li>
             </ul>
             <br />
@@ -73,7 +75,7 @@ function App() {
             </ul>
           </p>
 
-        {/*<a href='' download={true}>Download my CV</a>*/}
+        <a href={CV} download={true}>Download my CV</a>
         </div>
       </header>
 
