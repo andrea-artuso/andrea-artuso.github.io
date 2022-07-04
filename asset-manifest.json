@@ -1,16 +1,17 @@
 {
   "files": {
     "main.css": "/static/css/main.9c033e34.css",
-    "main.js": "/static/js/main.771bff87.js",
+    "main.js": "/static/js/main.60787055.js",
     "static/media/ero-forestiero.webp": "/static/media/ero-forestiero.64257e40179a44e79ead.webp",
     "static/media/ProfilePicture.png": "/static/media/ProfilePicture.b4cd36fcc680c2d1b384.png",
+    "static/media/AndreaArtuso_CV_07-2022.pdf": "/static/media/AndreaArtuso_CV_07-2022.359c981632d1c28cf909.pdf",
     "static/media/logotype-WHITE.png": "/static/media/logotype-WHITE.ea5668a0fc5648ba3066.png",
     "index.html": "/index.html",
     "main.9c033e34.css.map": "/static/css/main.9c033e34.css.map",
-    "main.771bff87.js.map": "/static/js/main.771bff87.js.map"
+    "main.60787055.js.map": "/static/js/main.60787055.js.map"
   },
   "entrypoints": [
     "static/css/main.9c033e34.css",
-    "static/js/main.771bff87.js"
+    "static/js/main.60787055.js"
   ]
 }
