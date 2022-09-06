@@ -7,4 +7,48 @@
 body {
     background-color: var(--bg-color);
     color: var(--default-text-color);
+    font-family: 'Source Code Pro', Arial, Helvetica, sans-serif;
+}
+
+.contact__button {
+    padding: 10px 30px;
+    background-color: var(--accent-color);
+    color: var(--bg-color);
+    border: none;
+    border-radius: 10px;
+    font-family: 'Source Code Pro';
+    font-weight: 700;
+    font-size: 16px;
+    transition: .1s ease-in;
+}
+.contact__button:hover {
+    transform: translateY(-10%);
+}
+
+
+
+.default__header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 225px;
+}
+
+.default__header > .header__logo {
+    width: 15%;
+}
+
+.default__header > .header__nav > .header__nav__item {
+    margin-left: 30px;
+    cursor: pointer;
+}
+.default__header > .header__nav > a.header__nav__item {
+    text-decoration: none;
+    color: var(--default-text-color);
+    font-size: 16px;
+    transition: .1s ease-in;
+}
+.default__header > .header__nav > a.header__nav__item:hover {
+    color: var(--accent-color);
 }
