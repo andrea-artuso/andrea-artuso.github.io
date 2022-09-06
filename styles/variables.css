@@ -1,6 +1,7 @@
 :root {
-    --primary-color: #00050D;
-    --secondary-color: #001129;
-    --primary-accent-color: #FFD60A;
-    --secondary-accent-color: #1E96FC;
+    --primary-color: #0A0908;
+    --accent-color: #FCA311;
+    --default-text-color: #ffffff;
+    --paragraph-color: rgba(255, 255, 255, 0.8);
+    --light-text-color: rgba(255, 255, 255, 0.5);
 }
