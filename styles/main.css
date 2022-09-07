@@ -46,6 +46,15 @@ p {
     box-shadow: 0 4px 60px var(--accent-color);
 }
 
+.hidden {
+    display: none;
+    visibility: hidden;
+}
+
+
+main {
+    z-index: 5;
+}
 
 main > .message {
     margin-top: 100px;
@@ -65,10 +74,11 @@ header.top__lights {
     left: 50%;
     transform: translateX(-50%);
 
-    padding: 0 360px;
+    padding: 0 20%;
 
     display: flex;
     justify-content: space-between;
+    z-index: 0;
 }
 
 footer.bottom__switches {
@@ -78,10 +88,11 @@ footer.bottom__switches {
     left: 50%;
     transform: translateX(-50%);
 
-    padding: 0 360px;
+    padding: 0 20%;
 
     display: flex;
     justify-content: space-between;
+    z-index: 0;
 }
 
 
@@ -120,6 +131,11 @@ footer.bottom__switches {
 
     background-color: #fff;
     cursor: pointer;
+
+    border: 3px solid #fff;
+}
+.switch > .plug:hover {
+    border-color: var(--accent-color);
 }
 
 .switch > .wire {
@@ -128,4 +144,81 @@ footer.bottom__switches {
     display: block;
     margin: auto;
     background-color: rgba(255, 255, 255, 0.5);
+}
+
+
+.success__menu {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+    border-radius: 20px;
+    padding: 15px;
+}
+.success__menu > img {
+    width: 40%;
+}
+.success__menu > div > * {
+    color: #000;
+}
+.success__menu > div > p {
+    margin-bottom: 25px;
+}
+
+
+.success__menu > div > .principal__button {
+    padding: 5px 10px;
+    background-color: var(--accent-color);
+    color: var(--bg-color);
+    border: none;
+    border-radius: 5px;
+    font-family: 'Source Code Pro';
+    font-weight: 700;
+    font-size: 16px;
+    transition: .1s ease-in;
+
+    cursor: pointer;
+}
+
+.success__menu > div > .secondary__button {
+    color: #000;
+    background: none;
+    text-decoration: underline;
+    border: none;
+    font-weight: 500;
+
+    cursor: pointer;
+}
+
+
+
+
+@media screen and (max-width: 797px) {
+    header.top__lights {
+        padding: 0 10%;
+    }
+    
+    footer.bottom__switches {
+        padding: 0 10%;
+    }
+
+    .success__menu {
+        width: 70%;
+    }
+    .success__menu > img {
+        width: 60%;
+    }
+}
+
+@media screen and (max-height: 700px) {
+    main > .message {
+        margin-top: 40px;
+    }
 }

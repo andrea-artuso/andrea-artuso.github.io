@@ -73,49 +73,62 @@
     
         <div class="message">
             <p>
-                In the meantime you can help our robots to decode this decimal number into binary:
+                In the meantime you can help my robots to decode this number from decimal to binary:
             </p>
     
-            <h1 class="big accent" id="decimalNumber">64</h1>
+            <h1 class="big accent" id="decimalNumber"></h1>
         </div>
     </main>
 
     <footer class="bottom__switches">
 
 
-        <div class="switch disconnected" id="switch1">
-            <div class="plug"></div>
+        <div class="switch">
+            <button class="plug" id="switch1"></button>
             <div class="wire"></div>
         </div>
-        <div class="switch disconnected" id="switch2">
-            <div class="plug"></div>
+        <div class="switch">
+            <button class="plug" id="switch2"></button>
             <div class="wire"></div>
         </div>
-        <div class="switch disconnected" id="switch3">
-            <div class="plug"></div>
+        <div class="switch">
+            <button class="plug" id="switch3"></button>
             <div class="wire"></div>
         </div>
-        <div class="switch disconnected" id="switch4">
-            <div class="plug"></div>
+        <div class="switch">
+            <button class="plug" id="switch4"></button>
             <div class="wire"></div>
         </div>
-        <div class="switch disconnected" id="switch5">
-            <div class="plug"></div>
+        <div class="switch">
+            <button class="plug" id="switch5"></button>
             <div class="wire"></div>
         </div>
-        <div class="switch disconnected" id="switch6">
-            <div class="plug"></div>
+        <div class="switch">
+            <button class="plug" id="switch6"></button>
             <div class="wire"></div>
         </div>
-        <div class="switch disconnected" id="switch7">
-            <div class="plug"></div>
+        <div class="switch">
+            <button class="plug" id="switch7"></button>
             <div class="wire"></div>
         </div>
-        <div class="switch disconnected" id="switch8">
-            <div class="plug"></div>
+        <div class="switch">
+            <button class="plug" id="switch8"></button>
             <div class="wire"></div>
         </div>
     </footer>
+
+
+    <div class="hidden success__menu" id="winMenu">
+        <img src="https://c.tenor.com/sZ94rds4ZqQAAAAC/o2-o2robot.gif" alt="Happy robot">
+
+        <div>
+            <h3>Great work!</h3>
+            <p>You helped the robots to convert the number!<br/>They still need your help, here's another number.</p>
+
+            <button class="principal__button" onclick="window.location.reload()">Ok!</button>
+            <button class="secondary__button" onclick="toggleMenu()">Close, sorry robots</button>
+        </div>
+    </div>
 
 </body>
 <script src="./scripts/main.js" type="text/javascript"></script>
