@@ -1,4 +1,5 @@
 # TODO  
 > - Implement resume and projects sections
-> - Implement footer
+> - Create maintenance branch and page
 > - Comment code
+> - Convert to standard components
