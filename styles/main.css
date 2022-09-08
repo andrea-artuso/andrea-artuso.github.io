@@ -16,7 +16,7 @@ body {
 
 
 
-.contact__button {
+.simple__button {
     padding: 10px 30px;
     background-color: var(--accent-color);
     color: var(--bg-color);
@@ -27,7 +27,7 @@ body {
     font-size: 16px;
     transition: .1s ease-in;
 }
-.contact__button:hover {
+.simple__button:hover {
     transform: translateY(-10%);
 }
 
@@ -91,26 +91,27 @@ body {
 
 section {
     padding: 0 15%;
+    margin-bottom: 90px;
 }
 
 section#landing > .column__container {
     margin-top: 120px;
     display: flex;
     justify-content: center;
-    align-items: flex-start;
+    align-items: center;
 }
 
 section#landing > .column__container > .img__container > img {
-    width: 55%;
+    width: 60%;
     display: block;
-    margin-left: auto;
+    margin: auto;
     border-radius: 70px;
     border: 5px solid var(--accent-color);
 }
 
 section#landing > .column__container > .landing__side {
-    margin-left: 85px;
     max-width: 50%;
+    margin-left: 85px;
     margin-top: 35px;
 }
 section#landing > .column__container > .landing__side > h1 {
@@ -125,14 +126,13 @@ section#landing > .column__container > .landing__side > h2 {
 }
 
 section#landing > .column__container > .landing__side > p {
-    max-width: 70%;
+    max-width: 80%;
     margin-top: 30px;
     color: var(--paragraph-color);
 }
 
 section#landing > .social__links__container {
     width: 100%;
-    padding: 0 18%;
     margin-top: 90px;
     display: flex;
     justify-content: space-between;
@@ -186,6 +186,97 @@ section#landing > .social__links__container > .social__link > img {
     z-index: 10;
 }
 
+
+section#resume {
+    text-align: center;
+}
+section#resume > h2 {
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--default-text-color);
+}
+section#resume > button {
+    cursor: pointer;
+}
+
+section#resume > .container {
+    text-align: left;
+    margin: 40px 0;
+    width: 100%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+section#resume > .container > * {
+    width: 45%;
+}
+section#resume > .container .subsection__title {
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--light-text-color);
+    margin-bottom: 10px;
+}
+
+section#resume > .container > .experience .experience__card {
+    width: 100%;
+    padding: 15px;
+    background-color: var(--secondary-color);
+    border-radius: 20px;
+    border-left: 3px solid var(--secondary-color);
+    transition: .2s ease-in;
+}
+section#resume > .container > .experience .experience__card:hover {
+    border-color: var(--accent-color);
+}
+
+section#resume > .container > .experience .experience__card > h2 {
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--default-text-color);
+}
+section#resume > .container > .experience .experience__card > h4 {
+    font-size: 15px;
+    font-weight: 400;
+    color: var(--default-text-color);
+    margin-top: 2px;
+}
+section#resume > .container > .experience .experience__card > .tags {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(185px, 185px));
+}
+section#resume > .container > .experience .experience__card > .tags .tag {
+    margin: 0 5px 5px 0;
+    padding: 5px;
+    background-color: var(--bg-color);
+    border-radius: 5px;
+    text-align: center;
+}
+
+section#resume > .container > .skills > .skills__grid {
+    max-width: 75%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(75px, 1fr));
+    row-gap: 25px;
+    column-gap: 25px;
+}
+section#resume > .container > .skills > .skills__grid > .skill {
+    width: 75px;
+    height: 75px;
+    padding: 15px;
+    background-color: var(--secondary-color);
+    border-radius: 20px;
+    cursor: pointer;
+
+    transition: .2s ease-in;
+}
+section#resume > .container > .skills > .skills__grid > .skill:hover {
+    transform: scale(110%);
+}
+section#resume > .container > .skills > .skills__grid > .skill img {
+    max-width: 45px;
+}
 
 
 .default__footer {
