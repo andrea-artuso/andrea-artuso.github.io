@@ -1,6 +1,5 @@
 # TODO  
-> - Implement projects sections
-> - Add skills icons, skills descriptions
-> - Upload curriculum
+> - Add contents to main
+> - Create footer
 > - Comment code
 > - Convert to standard components
