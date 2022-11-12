@@ -1,0 +1,151 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bg-color);
+    font-family: 'Source Code Pro', Arial, Helvetica, sans-serif;
+}
+
+body > section.landing {
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    color: #fff;
+}
+
+body > section.landing > .bg-img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+
+    background-image: url('../static/assets/images/background.png');
+    background-size: 100%;
+    filter: blur(10px);
+}
+
+span.quotation {
+    font-size: 20px;
+    color: var(--secondary-color);
+    font-weight: 700;
+    font-style: normal;
+}
+
+section.landing > .flex {
+    margin: 8% 10%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+section.landing > .flex > .description {
+    width: 50%;
+}
+section.landing > .flex > .description > h1 {
+    font-size: 48px;
+    font-weight: 800;
+}
+section.landing > .flex > .description > h3 {
+    font-size: 24px;
+    font-weight: 600;
+    margin-top: 12px;
+}
+section.landing > .flex > .description > p {
+    font-size: 18px;
+    font-weight: 400;
+    margin-top: 35px;
+    color: var(--paragraph-color);
+    max-width: 70%;
+}
+section.landing > .flex > .description > .contacts_icons {
+    margin-top: 40px;
+}
+section.landing > .flex > .description > .contacts_icons > .contact_icon {
+    width: 52px;
+    height: 52px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--light-text-color);
+    border-radius: 8px;
+    transition: ease .2s;
+}
+.contact_icon > img {
+    width: 32px;
+}
+section.landing > .flex > .description > .contacts_icons > .contact_icon:hover {
+    transform: scale(110%);
+}
+
+section.landing > .flex > .description > .quote {
+    margin-top: 90px;
+    padding: 10px;
+    border-left: 3px solid var(--secondary-color);
+}
+.quote > .content {
+    font-size: 18px;
+    font-weight: 700;
+    font-style: italic;
+    max-width: 80%;
+}
+.quote > .author {
+    font-size: 14px;
+    font-weight: 400;
+    color: var(--default-text-color);
+    margin-top: 15px;
+}
+
+
+
+section.landing > .flex > .terminal {
+    width: 45%;
+    min-height: 430px;
+    background-color: black;
+    border: 3px solid var(--secondary-color);
+    border-radius: 30px;
+    padding: 25px;
+}
+
+section.landing > .flex > .terminal > header {
+    display: block;
+}
+.terminal > header > .buttons > .btn {
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+}
+.terminal > header > .filename {
+    margin-top: 7px;
+}
+
+.terminal > .code { 
+    margin-top: 14px;
+}
+.terminal > .code div {
+    font-size: 14px;
+    padding: 4px 0;
+    font-weight: 700;
+    color: #00D650;
+}
+.terminal > .code div > .tilde { 
+    color: #2400FF;
+    margin-right: 10px;
+}
+
+
+main {
+    width: 100%;
+    margin-top: 90vh;
+    position: relative;
+    background-color: var(--bg-color);
+    z-index: 5;
+}
