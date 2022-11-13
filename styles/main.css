@@ -4,6 +4,10 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     background-color: var(--bg-color);
     font-family: 'Source Code Pro', Arial, Helvetica, sans-serif;
@@ -25,7 +29,7 @@ body > section.landing > .bg-img {
     position: absolute;
     top: 0;
     left: 0;
-    z-index: -1;
+    z-index: -10;
 
     background-image: url('../static/assets/images/background.png');
     background-size: 100%;
@@ -180,12 +184,190 @@ main > header > div > #scroll_icon {
     animation: scroll 1.8s infinite;
 }
 
+main section {
+    color: var(--default-text-color);
+    padding: 0 120px;
+}
+main section > .title {
+    font-size: 24px;
+    font-weight: 700;
+}
+
+main > section#computer-science-summaries > .summaries_grid {
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+main > section#computer-science-summaries > .summaries_grid > .summary {
+    width: 30%;
+    margin: 20px 0;
+    padding: 10px 15px;
+    border-radius: 15px;
+    background-color: var(--secondary-color);
+}
+
+main > section#computer-science-summaries > .summaries_grid > .summary > header {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+main > section#computer-science-summaries > .summaries_grid > .summary > header > * {
+    width: 38px;
+    height: 19px;
+    margin-right: 7px;
+    text-align: center;
+    border-radius: 3px;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+main > section#computer-science-summaries > .summaries_grid > .summary > .summary_content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 10px 0;
+}
+main > section#computer-science-summaries > .summaries_grid > .summary > .summary_content > .summary_title {
+    font-size: 20px;
+    font-weight: 700;
+    max-width: 80%;
+}
+main > section#computer-science-summaries > .summaries_grid > .summary > .summary_content > a {
+    width: 40px;
+    height: 40px;
+    border-radius: 9px;
+    background-color: #00D650;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: .2s ease-in;
+}
+main > section#computer-science-summaries > .summaries_grid > .summary > .summary_content > a:hover {
+    transform: scale(110%);
+}
+main > section#computer-science-summaries > .summaries_grid > .summary > .summary_content > a > img {
+    width: 18px;
+}
 
 
+
+main > section#projects-and-open-source-code {
+    margin-top: 100px;
+}
+
+main > section#projects-and-open-source-code > .projects_grid {
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+main > section#projects-and-open-source-code > .projects_grid > .project {
+    width: 48%;
+    height: 440px;
+    margin: 20px 0;
+    padding: 10px 15px;
+    border-radius: 15px;
+
+    position: relative;
+    border-radius: 15px;
+
+    transition: .4s ease-in;
+}
+
+
+main > section#projects-and-open-source-code > .projects_grid > .project:hover > .bg_img {
+    filter: blur(10px);
+}
+main > section#projects-and-open-source-code > .projects_grid > .project:hover > .overlay_message {
+    visibility: hidden;
+}
+main > section#projects-and-open-source-code > .projects_grid > .project:hover > .overlay {
+    opacity: 1;
+}
+
+main > section#projects-and-open-source-code > .projects_grid > .project > .bg_img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: url('http://latestwall.com/images/wallpaper/sunset_hd_wallpaper_21.jpg');
+    background-size: 100%;
+    z-index: -1;
+    border-radius: 15px;
+
+    transition: .4s ease-in;
+}
+main > section#projects-and-open-source-code > .projects_grid > .project > .overlay_message {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 8px 15px;
+    font-size: 12px;
+    font-weight: 600;
+    background-color: rgba(0, 0, 0, .8);
+    border-radius: 8px;
+
+    transition: .1s ease-in;
+}
+
+main > section#projects-and-open-source-code > .projects_grid > .project > .overlay {
+    opacity: 0;
+
+    border-radius: 15px;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, .8);
+    padding: 40px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    transition: .5s ease-in;
+}
+main > section#projects-and-open-source-code > .projects_grid > .project > .overlay .title {
+    margin-bottom: 15px;
+    justify-self: flex-start;
+}
+main > section#projects-and-open-source-code > .projects_grid > .project > .overlay .description {
+    color: var(--paragraph-color);
+    justify-self: left; 
+}
+main > section#projects-and-open-source-code > .projects_grid > .project > .overlay > .link_btn {
+    display: inline;
+    padding: 10px 40px;
+    background-color: #fff;
+    color: #000;
+    font-weight: 700;
+    font-size: 14px;
+    text-decoration: none;
+    border-radius: 9px;
+    transition: .2s ease-in;
+}
+main > section#projects-and-open-source-code > .projects_grid > .project > .overlay > .link_btn:hover {
+    transform: scale(110%);
+}
 
 @keyframes scroll {
     0% { height: 5px; top: 25%; }
     30% { height: 15px; top: 25%; }
     50% { height: 5px; top: 65%; }
     100% { height: 5px; top: 25%; }
+}
+
+
+.italian {
+    background-image: url('http://nouahsark.com/data/images/infocenter/worldwide/europe/flags_big/italy.png');
+    background-size: 100%;
 }

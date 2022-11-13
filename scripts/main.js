@@ -7,10 +7,18 @@ const quote_content = document.getElementById('quote_content');
 const quote_author = document.getElementById('quote_author');
 const terminal_text = document.getElementById('terminal_text');
 const landing = document.getElementById('landing');
+const summaries_grid =  document.getElementById('summaries_grid');
+const projects_grid = document.getElementById('projects_grid');
 
 window.onload = () => {
     getRandomQuote();
     displayCode();
+
+    if (summaries_grid.childElementCount == 0)
+        summaries_grid.innerText = "No summaries available.";
+
+    if (projects_grid.childElementCount == 0)
+        projects_grid.innerText = "No projects available.";
 }
 
 // Get random quote function
