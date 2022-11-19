@@ -359,6 +359,45 @@ main > section#projects-and-open-source-code > .projects_grid > .project > .over
     transform: scale(110%);
 }
 
+main > section#projects-and-open-source-code > .opensource_container {
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px 90px;
+}
+main > section#projects-and-open-source-code > .opensource_container > .opensource_tab {
+    width: 100%;
+    background-color: var(--secondary-color);
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    padding: 20px;
+    border-radius: 15px;
+}
+main > section#projects-and-open-source-code > .opensource_container > .opensource_tab > .data {
+    margin-left: 20px;
+}
+main > section#projects-and-open-source-code > .opensource_container > .opensource_tab > .data > h3 {
+    margin-bottom: 20px;
+    font-size: 20px;
+    font-weight: 700;
+}
+main > section#projects-and-open-source-code > .opensource_container > .opensource_tab > .data > .link_button {
+    padding: 8px 15px;
+    font-size: 14px;
+    font-weight: 700;
+    background-color: #000;
+    border-radius: 8px;
+    text-decoration: none;
+    color: #fff;
+}
+main > section#projects-and-open-source-code > .opensource_container > .opensource_tab > .data > .link_button.github {
+    background-color: #2DBA4E;
+}
+main > section#projects-and-open-source-code > .opensource_container > .opensource_tab > .data > .link_button.gitlab {
+    background-color: #E24329;
+}
+
 @keyframes scroll {
     0% { height: 5px; top: 25%; }
     30% { height: 15px; top: 25%; }
