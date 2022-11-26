@@ -11,6 +11,7 @@ html {
 body {
     background-color: var(--bg-color);
     font-family: 'Source Code Pro', Arial, Helvetica, sans-serif;
+    font-size: 16px;
 }
 
 body > section.landing {
@@ -37,7 +38,7 @@ body > section.landing > .bg-img {
 }
 
 span.quotation {
-    font-size: 20px;
+    font-size: 1.2rem;
     color: var(--secondary-color);
     font-weight: 700;
     font-style: normal;
@@ -54,16 +55,16 @@ section.landing > .flex > .description {
     width: 50%;
 }
 section.landing > .flex > .description > h1 {
-    font-size: 48px;
+    font-size: 3rem;
     font-weight: 800;
 }
 section.landing > .flex > .description > h3 {
-    font-size: 24px;
+    font-size: 1.5rem;
     font-weight: 600;
     margin-top: 12px;
 }
 section.landing > .flex > .description > p {
-    font-size: 18px;
+    font-size: 1.1rem;
     font-weight: 400;
     margin-top: 35px;
     color: var(--paragraph-color);
@@ -95,13 +96,13 @@ section.landing > .flex > .description > .quote {
     border-left: 3px solid var(--secondary-color);
 }
 .quote > .content {
-    font-size: 18px;
+    font-size: 1.1rem;
     font-weight: 700;
     font-style: italic;
     max-width: 80%;
 }
 .quote > .author {
-    font-size: 14px;
+    font-size: 0.8rem;
     font-weight: 400;
     color: var(--default-text-color);
     margin-top: 15px;
@@ -131,18 +132,16 @@ section.landing > .flex > .terminal > header {
     margin-top: 7px;
 }
 
-.terminal > .code { 
+.terminal > .code {
     margin-top: 14px;
+    padding-left: 10px;
+    border-left: 1px solid rgb(0, 89, 255);
 }
 .terminal > .code div {
-    font-size: 14px;
-    padding: 4px 0;
+    font-size: 0.8rem;
+    padding: 0 0 8px 0;
     font-weight: 700;
     color: #00D650;
-}
-.terminal > .code div > .tilde { 
-    color: #2400FF;
-    margin-right: 10px;
 }
 
 
@@ -189,7 +188,7 @@ main section {
     padding: 0 120px;
 }
 main section > .title {
-    font-size: 24px;
+    font-size: 1.5rem;
     font-weight: 700;
 }
 
@@ -220,7 +219,7 @@ main > section#computer-science-summaries > .summaries_grid > .summary > header 
     margin-right: 7px;
     text-align: center;
     border-radius: 3px;
-    font-size: 14px;
+    font-size: 0.8rem;
     font-weight: 700;
 }
 
@@ -232,7 +231,7 @@ main > section#computer-science-summaries > .summaries_grid > .summary > .summar
     padding: 10px 0;
 }
 main > section#computer-science-summaries > .summaries_grid > .summary > .summary_content > .summary_title {
-    font-size: 20px;
+    font-size: 1.2rem;
     font-weight: 700;
     max-width: 80%;
 }
@@ -261,15 +260,13 @@ main > section#projects-and-open-source-code {
 
 main > section#projects-and-open-source-code > .projects_grid {
     margin-top: 50px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(48%, 1fr));
+    gap: 40px;
 }
 main > section#projects-and-open-source-code > .projects_grid > .project {
-    width: 48%;
+    width: 100%;
     height: 440px;
-    margin: 20px 0;
     padding: 10px 15px;
     border-radius: 15px;
 
@@ -280,13 +277,16 @@ main > section#projects-and-open-source-code > .projects_grid > .project {
 }
 
 
-main > section#projects-and-open-source-code > .projects_grid > .project:hover > .bg_img {
+main > section#projects-and-open-source-code > .projects_grid > .project.visible > .bg_img {
     filter: blur(10px);
 }
-main > section#projects-and-open-source-code > .projects_grid > .project:hover > .overlay_message {
+main > section#projects-and-open-source-code > .projects_grid > .project.visible > .overlay_message {
     visibility: hidden;
 }
-main > section#projects-and-open-source-code > .projects_grid > .project:hover > .overlay {
+main > section#projects-and-open-source-code > .projects_grid > .project:not(.visible) > .overlay {
+    pointer-events: none;
+}
+main > section#projects-and-open-source-code > .projects_grid > .project.visible > .overlay {
     opacity: 1;
 }
 
@@ -297,7 +297,8 @@ main > section#projects-and-open-source-code > .projects_grid > .project > .bg_i
     top: 0;
     left: 0;
     background-image: url('http://latestwall.com/images/wallpaper/sunset_hd_wallpaper_21.jpg');
-    background-size: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
     z-index: -1;
     border-radius: 15px;
 
@@ -309,7 +310,7 @@ main > section#projects-and-open-source-code > .projects_grid > .project > .over
     left: 50%;
     transform: translateX(-50%);
     padding: 8px 15px;
-    font-size: 12px;
+    font-size: 0.6rem;
     font-weight: 600;
     background-color: rgba(0, 0, 0, .8);
     border-radius: 8px;
@@ -342,7 +343,7 @@ main > section#projects-and-open-source-code > .projects_grid > .project > .over
 }
 main > section#projects-and-open-source-code > .projects_grid > .project > .overlay .description {
     color: var(--paragraph-color);
-    justify-self: left; 
+    justify-self: left;
 }
 main > section#projects-and-open-source-code > .projects_grid > .project > .overlay > .link_btn {
     display: inline;
@@ -350,7 +351,7 @@ main > section#projects-and-open-source-code > .projects_grid > .project > .over
     background-color: #fff;
     color: #000;
     font-weight: 700;
-    font-size: 14px;
+    font-size: 0.8rem;
     text-decoration: none;
     border-radius: 9px;
     transition: .2s ease-in;
@@ -362,7 +363,7 @@ main > section#projects-and-open-source-code > .projects_grid > .project > .over
 main > section#projects-and-open-source-code > .opensource_container {
     margin-top: 50px;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(325px, 1fr));
     gap: 30px 90px;
 }
 main > section#projects-and-open-source-code > .opensource_container > .opensource_tab {
@@ -379,12 +380,12 @@ main > section#projects-and-open-source-code > .opensource_container > .opensour
 }
 main > section#projects-and-open-source-code > .opensource_container > .opensource_tab > .data > h3 {
     margin-bottom: 20px;
-    font-size: 20px;
+    font-size: 1.1rem;
     font-weight: 700;
 }
 main > section#projects-and-open-source-code > .opensource_container > .opensource_tab > .data > .link_button {
     padding: 8px 15px;
-    font-size: 14px;
+    font-size: 0.8rem;
     font-weight: 700;
     background-color: #000;
     border-radius: 8px;
@@ -398,6 +399,99 @@ main > section#projects-and-open-source-code > .opensource_container > .opensour
     background-color: #E24329;
 }
 
+
+
+footer.page_footer {
+    margin-top: 150px;
+    background-color: var(--secondary-color);
+    color: #fff;
+    font-weight: 700;
+    padding: 50px 120px 0 120px;
+    font-size: 1.2rem;
+}
+footer.page_footer > div.sections {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    font-size: 1rem;
+}
+footer.page_footer > div > div:first-child {
+    text-align: left;
+    width: 50%;
+}
+footer.page_footer > div > div:last-child {
+    text-align: right;
+    width: 50%;
+}
+
+footer.page_footer > div > div > h4.footer_div_title {
+    font-weight: 400;
+    color: var(--paragraph-color);
+    margin-bottom: 30px;
+    font-size: 1rem;
+}
+footer.page_footer > div > div > ul {
+    list-style: none;
+}
+footer.page_footer > div > div > ul > li {
+    margin-bottom: 19px;
+    transition: ease-in .3s;
+    height: 22px;
+}
+footer.page_footer > div > div > ul > li > img {
+    width: 22px;
+    vertical-align: middle;
+}
+footer.page_footer > div > div > ul > li > a {
+    color: #fff;
+    margin: 0;
+    transition: ease-in .2s;
+}
+
+footer.page_footer > div > div:nth-child(2) a{
+    color: #fff;
+}
+
+footer.page_footer > div > div:last-child > ul > li > img{
+    width: 0;
+    opacity: 0;
+    transition: .2s ease-in;
+}
+
+footer.page_footer > div > div:first-child > ul > li > a:hover {
+    margin-left: 20px;
+}
+footer.page_footer > div > div:last-child > ul > li:hover > img{
+    width: 18px;
+    opacity: 1;
+}
+
+footer.page_footer > div.credits {
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    font-size: 0.8rem;
+}
+footer.page_footer > div.credits > * {
+    margin-right: 20px;
+    font-weight: 400;
+}
+footer.page_footer > div.credits > * > a {
+    color: #fff;
+    font-weight: 700;
+}
+
+footer.page_footer > div.copyright {
+    width: 100%;
+    text-align: center;
+    padding: 20px;
+    border-top: 2px solid #fff;
+    font-size: 1rem;
+}
+
+
 @keyframes scroll {
     0% { height: 5px; top: 25%; }
     30% { height: 15px; top: 25%; }
@@ -409,4 +503,117 @@ main > section#projects-and-open-source-code > .opensource_container > .opensour
 .italian {
     background-image: url('http://nouahsark.com/data/images/infocenter/worldwide/europe/flags_big/italy.png');
     background-size: 100%;
+}
+
+
+
+/*---- MEDIA QUERIES ----*/
+@media screen and (max-width: 1024px) {
+    section.landing > .flex {
+        margin: 5%;
+    }
+
+    section.landing > .flex > .description > h1 {
+        font-size: 2.5rem;
+    }
+    section.landing > .flex > .description > h3 {
+        font-size: 1.3rem;
+        margin-top: 10px;
+    }
+    section.landing > .flex > .description > p {
+        font-size: 1rem;
+        margin-top: 25px;
+    }
+
+    footer.page_footer {
+        padding: 50px 50px 0 50px;
+        font-size: 1rem;
+    }
+    footer.page_footer > div.sections {
+        font-size: 0.8rem;
+    }
+}
+
+
+
+@media screen and (max-width: 767px) {
+
+
+    section.landing > .flex > .terminal {
+        display: none;
+    }
+    section.landing > .flex > .description {
+        width: 100%;
+    }
+    section.landing > .flex > .description > .quote {
+        margin-top: 40px;
+        padding: 10px;
+        border-left: 3px solid var(--secondary-color);
+    }
+
+    main {
+        margin-top: 100vh;
+    }
+
+    main section {
+        padding: 0 60px;
+    }
+
+    main > section#projects-and-open-source-code > .projects_grid > .project > .overlay {
+        padding: 20px;
+    }
+    main > section#projects-and-open-source-code > .projects_grid > .project > .overlay .title {
+        margin-bottom: 10px;
+        font-size: 1rem;
+    }
+    main > section#projects-and-open-source-code > .projects_grid > .project > .overlay .description {
+        color: var(--paragraph-color);
+        justify-self: left;
+        font-size: 0.8rem;
+    }
+
+    footer.page_footer {
+        padding: 0px 50px;
+    }
+    footer.page_footer > div.sections {
+        flex-direction: column;
+    }
+    footer.page_footer > div.sections > div {
+        width: 100%;
+        text-align: left;
+        margin-top: 30px;
+    }
+    footer.page_footer > div > div > h4.footer_div_title {
+        margin-bottom: 20px;
+    }
+}
+
+@media screen and (max-width: 540px) {
+    section.landing > .flex > .description > p {
+        max-width: 100%;
+    }
+
+    .quote > .content {
+        font-size: 0.9rem;
+    }
+
+    footer.page_footer > div > div:first-child > ul > li > a:hover {
+        margin-left: 10px;
+    }
+
+
+    footer.page_footer > div.credits {
+        padding: 20px 0;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    footer.page_footer {
+        padding: 20px;
+    }
+
+    main section {
+        padding: 0 20px;
+    }
 }
