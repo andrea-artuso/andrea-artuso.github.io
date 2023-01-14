@@ -296,7 +296,6 @@ main > section#projects-and-open-source-code > .projects_grid > .project > .bg_i
     position: absolute;
     top: 0;
     left: 0;
-    background-image: url('http://latestwall.com/images/wallpaper/sunset_hd_wallpaper_21.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     z-index: -1;
@@ -363,11 +362,11 @@ main > section#projects-and-open-source-code > .projects_grid > .project > .over
 main > section#projects-and-open-source-code > .opensource_container {
     margin-top: 50px;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(325px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(325px, 30%));
     gap: 30px 90px;
 }
 main > section#projects-and-open-source-code > .opensource_container > .opensource_tab {
-    width: 100%;
+    max-width: 100%;
     background-color: var(--secondary-color);
     display: flex;
     justify-content: left;
